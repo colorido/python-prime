@@ -1,6 +1,7 @@
 # coding: utf-8
 # Here your code !
 
+
 def primeCount(stNum,endNum) :
     
     num = [ x for x in range(stNum,endNum)]
