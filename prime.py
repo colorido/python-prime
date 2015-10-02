@@ -1,6 +1,7 @@
-# coding: utf-8
-# Here your code !
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
+import matplotlib.pyplot as plt
 
 def primeCount(stNum,endNum) :
     
@@ -18,9 +19,20 @@ def primeCount(stNum,endNum) :
     return len([ x for x in num if x != "*" ])
 
 cnt = 1
+cntMax = 1000**2
+ans = []
 
-while cnt < 10 :
+while cnt < cntMax :
     print "--"
     print cnt*1000-1000+1
-    print primeCount(cnt*1000-1000+1,cnt*1000+1)
+    ans.append(primeCount(cnt*1000-1000+1,cnt*1000+1))
     cnt += 1
+
+print ans
+
+X = range(1,cntMax)
+Y = ans
+
+plt.bar(X,Y, align="center")
+plt.xticks(X,[ str(x*1000-1000+1) + "~" for x in X])
+plt.show()
