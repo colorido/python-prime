@@ -19,7 +19,7 @@ def primeCount(stNum,endNum) :
     return len([ x for x in num if x != "*" ])
 
 cnt = 1
-cntMax = 1000**2
+cntMax = 1000**2 # いくつまで計算を行うか
 ans = []
 
 while cnt < cntMax :
